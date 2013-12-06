@@ -26,13 +26,14 @@ public class FartActivity extends Activity {
         }
 
         MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.fart1);
+        mediaPlayer.setLooping(true);
         mediaPlayer.start(); // no need to call prepare(); create() does that for you
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.fart, menu);
         return true;
